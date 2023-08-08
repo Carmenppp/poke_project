@@ -1,7 +1,7 @@
 <script setup>
     import { RouterLink } from 'vue-router';
     import { useGetData } from '@/composables/getData.js'
-
+    
     
     const {data, getData, loading, error} = useGetData()
    
@@ -12,6 +12,7 @@
 
 <template>
     <h1>Pokemons</h1>
+    
      <p v-if="loading">Cargando informacion...</p>
      <div class="alert alert-danger mt-3" v-if="error"> {{ error }} </div>
      <div v-if="data">
